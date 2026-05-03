@@ -1,0 +1,48 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+dist/
+build/
+*.local
+
+# Vite cache
+.vite/
+
+# Environment files — never commit secrets
+.env
+.env.*
+!.env.example
+
+# Test coverage
+coverage/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS artefacts
+.DS_Store
+Thumbs.db
+
+# Editor / IDE directories and settings
+.idea/
+.vscode/settings.json
+.vscode/launch.json
+*.swp
+*.swo
+*~
+
+# SQLite dev databases (outside demo init scripts)
+*.db
+*.sqlite
+!backend/src/demo/**
+
+# Docker local overrides
+docker-compose.override.yml
+
+# TypeScript build info
+*.tsbuildinfo

@@ -1,0 +1,42 @@
+services:
+  pagila:
+    image: postgres:16-alpine
+    container_name: db-cosmos-pagila
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: pagila
+      POSTGRES_USER: pagila
+      POSTGRES_PASSWORD: pagila
+    ports:
+      - "5433:5432"
+    volumes:
+      - ./backend/src/demo/pagila-init:/docker-entrypoint-initdb.d:ro
+      - pagila_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U pagila -d pagila"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  northwind:
+    image: postgres:16-alpine
+    container_name: db-cosmos-northwind
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: northwind
+      POSTGRES_USER: northwind
+      POSTGRES_PASSWORD: northwind
+    ports:
+      - "5434:5432"
+    volumes:
+      - ./backend/src/demo/northwind-init:/docker-entrypoint-initdb.d:ro
+      - northwind_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U northwind -d northwind"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+volumes:
+  pagila_data:
+  northwind_data:

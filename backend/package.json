@@ -1,0 +1,26 @@
+{
+  "name": "@db-cosmos/backend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc --outDir dist",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "@db-cosmos/shared": "*",
+    "@db-cosmos/connectors": "*",
+    "@db-cosmos/engine-graph": "*",
+    "@db-cosmos/engine-runtime": "*",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.1",
+    "@types/ws": "^8.5.13",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3"
+  }
+}
