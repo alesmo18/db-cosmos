@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./db-cosmos-logo.png" alt="db-cosmos" width="160" />
+  <img src="./db-cosmos-logo.png" alt="db-cosmos logo" title="db-cosmos" width="160" style="border-radius: 20px;" />
 </p>
 
 <h1 align="center">db-cosmos</h1>
@@ -9,6 +9,16 @@
   A 3D real-time database observatory. Watch your tables orbit, pulse, and glow as live queries flow through them.<br/>
   Not an admin tool. Not a SQL editor. Pure observation.
 </p>
+
+---
+
+## See It in Motion
+
+<p align="center">
+  <img src="./dbcosmos-demo.gif" alt="db-cosmos demo — live 3D database visualization" width="800" style="border-radius: 20px; max-width: 100%;" />
+</p>
+
+<p align="center"><em>Demo database rendered as a living galaxy — tables pulse with live query traffic.</em></p>
 
 ---
 
